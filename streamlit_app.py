@@ -12,3 +12,4 @@ dfResultados = dfCalificaciones[["matricula","promedio","status"]]
 dfResultados
 
 st.dataframe(dfResultados)
+fig = px.bar(dfResultados, x="status", y=df

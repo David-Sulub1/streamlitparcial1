@@ -51,11 +51,13 @@ st.plotly_chart(fig, use_container_width=True)
 
 
 #GRAFICA DE PIE POR ASEGURADORAS
+st.title('GRAFICA DE PIE POR ASEGURADORAS')
 fig= px.pie (df,values=df["ASEGURADORA"].value_counts().values, names=df["ASEGURADORA"].value_counts().index)
 st.plotly_chart(fig, use_container_width=True)
 
 
 #AGRUPACION DE ASEGURADORAS POR TIPO DE SEGURO.
+st.title('GRAFICA DE ASEGURADORAS POR TIPO DE SEGUROS')
 df.groupby(["ASEGURADORA","SEGURO"]).count()
 df_stack=df.groupby(["ASEGURADORA","SEGURO"]).size().reset_index()
 df_stack.columns
